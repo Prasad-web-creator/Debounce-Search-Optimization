@@ -8,7 +8,7 @@ const result2 = document.getElementById('result-2')
 
 search1.addEventListener('input',(e)=>{
     let value = e.target.value
-    if(String(value).length>20){
+    if(String(value).length>=20){
         result1.textContent = "⚠️ Max 20 characters allowed"
         search1.value = ""
         return;
@@ -20,7 +20,7 @@ const debouncedSearch = debounce(searchQuery,300)
 
 search2.addEventListener('input',(e)=>{
     let value = e.target.value
-    if(String(value).length>20){
+    if(String(value).length>=20){
         result2.textContent = "⚠️ Max 20 characters allowed"
         search2.value = ""
         return;
