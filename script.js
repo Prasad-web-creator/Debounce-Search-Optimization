@@ -6,7 +6,7 @@ const result1 = document.getElementById('result-1')
 const result2 = document.getElementById('result-2')
 
 
-search1.addEventListener('keyup',(e)=>{
+search1.addEventListener('input',(e)=>{
     let value = e.target.value
     if(String(value).length>49){
         result1.textContent = "⚠️ Max 50 characters allowed"
@@ -18,7 +18,7 @@ search1.addEventListener('keyup',(e)=>{
 
 const debouncedSearch = debounce(searchQuery,300)
 
-search2.addEventListener('keyup',(e)=>{
+search2.addEventListener('input',(e)=>{
     let value = e.target.value
     if(String(value).length>49){
         result2.textContent = "⚠️ Max 50 characters allowed"
